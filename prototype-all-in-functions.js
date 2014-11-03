@@ -22,15 +22,10 @@ function Student(name, age) {
 
 Student.extends(Person);
 
-// Student.prototype.introduce = function () {
-// 		console.log("Name: " + this.name + ", Age: " + this.age);
-// 	}
+Student.prototype.introduce = function () {
+	console.log("Name: " + this.name + ", Age: " + this.age);
+}
 
-Student.prototype = {
-	introduce: function () {
-		console.log("Name: " + this.name + ", Age: " + this.age);
-	}
-};
 
 var student = new Student("Minka", 21);
 student.introduce();

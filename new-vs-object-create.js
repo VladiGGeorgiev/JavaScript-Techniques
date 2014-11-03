@@ -8,6 +8,10 @@ Person.prototype.sayHi = function sayHi() {
 }
 
 var person = new Person();
-var p2 = Object.create(Person.prototype);
-console.log(person._name);
+var person2 = Object.create(Person.prototype);
 
+console.log(person._name); // Pesho
+console.log(person2._name); // undefined
+
+console.log(person instanceof Person); // true
+console.log(person2 instanceof Person); // true

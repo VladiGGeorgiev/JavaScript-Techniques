@@ -13,14 +13,14 @@ function newObject(func) {
  
   // create a new object with its prototype assigned to func.prototype
   var object = Object.create(func.prototype);
- 
+
   // invoke the constructor, passing the new object as 'this'
   // and the rest of the arguments as the arguments
-  func.apply(object, args);
- 
+  var result = func.apply(object, args);
+
   // return the new object
-  return object;
+  return (typeof result === 'object' && result) || object;
 }
  
 var pesho = newObject(Person, "Peter", "Stamatov");
-console.log(pesho.toStringa);
+console.log(pesho.toString());
