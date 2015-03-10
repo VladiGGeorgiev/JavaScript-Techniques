@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<script>
 Function.prototype.new = function () {
 	function functor() { return constructor.apply(this, args) }
 	var args = Array.prototype.slice.call(arguments);
@@ -24,6 +17,3 @@ function Person(name, age) {
 
 var p = Person("Pesho", 13);
 console.log(p);
-</script>
-</body>
-</html>
