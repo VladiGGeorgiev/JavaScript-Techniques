@@ -1,6 +1,5 @@
 function Person(name, age) {
   if (!(this instanceof arguments.callee)) {
-    //return new Person(name, age);
     return new arguments.callee(name, age);
   }
   
